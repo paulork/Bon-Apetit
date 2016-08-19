@@ -27,7 +27,7 @@ public class LoginInterceptor {
         Annotation[] annotations = controllerMethod.getController().getAnnotations();
         for (Annotation annotation : annotations) {
             if(annotation.annotationType().equals(Public.class)){
-                return false;
+                return false; // Não intercepta se existir a anotação @Public
             }
         }
         return exist;
